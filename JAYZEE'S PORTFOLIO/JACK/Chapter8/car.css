@@ -1,0 +1,36 @@
+#car {
+    font-family: Arial;
+}
+
+#body {
+    position: absolute;
+    top: 50px;
+    width: 60%;
+    height: 80px;
+    background-color: #e17cae;
+    border: 10px double rgb(38, 2, 58);
+    text-align: center;
+}
+
+#backwheel {
+    position: absolute;
+    left: 10%;
+    top: 130px;
+    background-color: #d40404;
+    border: 10px dotted rgb(207, 6, 207);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+#frontwheel {
+    position: absolute;
+    left: 55%;
+    top: 130px;
+    background-color: #e4e3e3;
+    border-style: dotted dashed solid double;
+    border-color: #2b08c4;
+    border-radius: 40px;
+    width: 50px;
+    height: 50px;
+}
