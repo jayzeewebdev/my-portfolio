@@ -1,28 +1,34 @@
+ const secretNumber = 26;
 
-  // Secret number is ALWAYS 7
-  var secret = 7;
+    const minNum = 1;
+    const maxNum = 100;
 
-  let attempts = 0;
+    let attempts = 0;
 
-  // First guess
-  let guess = parseInt(prompt("Please guess the secret number (1-20)"));
-  attempts++;
+    const inputArea = document.querySelector('.input-area');
+    const submitBtn = document.querySelector('.button-submit');
+    const divElement = document.querySelector('.display-area');
 
-  // Loop until correct
-  while (guess !== secret) {
+    submitBtn.addEventListener('click', guessCorrectNumber);
 
-    if (guess < secret) {
-      alert("Incorrect, too low");
-    } 
-    else if (guess > secret) {
-      alert("Incorrect, too high");
-    }
+    function guessCorrectNumber() {
+      let userGuess = Number(inputArea.value);
+      attempts++;
 
-    // Ask again
-    guess = parseInt(prompt("Please guess the secret number (1-20)"));
-    attempts++;
-  }
+       if (userGuess === secretNumber) {
+        divElement.textContent = `CONGRATULATIONS! THE NUMBER WAS ${secretNumber}, IT TOOK YOU ${attempts} ATTEMPTS`;
+        //STOPPING THE GAME AFTER THE CORRECT GUESS
+        submitBtn.disabled = true;
+       } else if (userGuess < secretNumber) {
+        // too low
+        divElement.textContent = `TOO LOW, TRY AGAIN ${attempts} ATTEMPTS.`;
+      } else {
+        // too high
+        divElement.textContent = `TOO HIGH, TRY AGAIN ${attempts} ATTEMPTS.`;
+      }
 
-  // Correct guess message
-  alert(`Correct Guess! You guessed it in ${attempts} attempt(s).`);
+     
 
+        inputArea.value = "";
+
+      };

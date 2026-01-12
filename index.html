@@ -1,37 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Resume - Start Bootstrap Theme</title>
-
+    <title>Jack Thabang Seshoka - Resume</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-
-    <!-- Font Awesome icons -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-
-    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" />
-
-    <!-- Core theme CSS -->
-    <link href="assets/css/styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #bd5d38;
+        }
+        
+        body {
+            font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            padding-top: 54px;
+            color: #868e96;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .text-primary {
+            color: var(--primary-color) !important;
+        }
+        
+        #sideNav {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        #sideNav .navbar-nav .nav-item .nav-link {
+            font-weight: 800;
+            letter-spacing: 0.05rem;
+            text-transform: uppercase;
+        }
+        
+        #sideNav .navbar-toggler:focus {
+            outline-color: #d48a6e;
+        }
+        
+        @media (min-width: 992px) {
+            #sideNav {
+                padding-left: 0;
+                padding-right: 0;
+                text-align: center;
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                width: 17rem;
+                height: 100vh;
+            }
+            
+            #sideNav .navbar-brand {
+                display: flex;
+                margin: auto auto 0;
+                padding: 0.5rem;
+            }
+            
+            #sideNav .navbar-nav {
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: auto;
+            }
+            
+            #sideNav .navbar-nav .nav-item {
+                display: block;
+            }
+            
+            body {
+                padding-top: 0;
+                padding-left: 17rem;
+            }
+        }
+        
+        .img-profile {
+            max-width: 10rem;
+            max-height: 10rem;
+            border: 0.5rem solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .resume-section {
+            padding-top: 5rem !important;
+            padding-bottom: 5rem !important;
+            max-width: 75rem;
+        }
+        
+        .resume-section-content {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        
+        h1 {
+            font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #343a40;
+            font-size: 6rem;
+            line-height: 5.5rem;
+        }
+        
+        h2 {
+            font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #343a40;
+        }
+        
+        h3 {
+            font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .subheading {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.5rem;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            height: 3.5rem;
+            width: 3.5rem;
+            background-color: #495057;
+            color: #fff !important;
+            border-radius: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+            line-height: 3.5rem;
+            margin-right: 1rem;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .dev-icons {
+            font-size: 3rem;
+        }
+        
+        .dev-icons .list-inline-item i:hover {
+            color: var(--primary-color);
+        }
+        
+        .project-item {
+            margin-bottom: 3rem;
+        }
+        
+        .project-item img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-item img:hover {
+            transform: scale(1.05);
+        }
+        
+        .profile-placeholder {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            font-weight: bold;
+            border: 0.5rem solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
 </head>
 
 <body id="page-top">
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
             <span class="d-block d-lg-none">JACK THABANG SESHOKA</span>
             <span class="d-none d-lg-block">
-                <div style="width: 100%; max-width: 200px;">
-                    <img class="img-fluid img-profile mb-2" src="assets/img/profile.jpg" alt="profile"
-                        style="width: 100%; height: auto; border-radius: 50%;" />
-                </div>
+                <img class="img-fluid img-profile mb-2" src="assets/img/Profile.jpg" alt="Jack Thabang Seshoka" 
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="profile-placeholder mb-2" style="display:none;">JTS</div>
             </span>
         </a>
 
@@ -42,12 +202,13 @@
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
+                <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
             </ul>
         </div>
     </nav>
@@ -67,13 +228,13 @@
                     <a href="mailto:jayzee.seshoka@outlook.com">jayzee.seshoka@outlook.com</a>
                 </div>
 
-                <p class="lead mb-5">I am currently studying WEB DEVELOPMENT at CODE COLLEGE.</p>
+                <p class="lead mb-5">I am currently studying WEB DEVELOPMENT at CODE COLLEGE, passionate about creating responsive and user-friendly web applications. I'm eager to apply my skills in HTML, CSS, and JavaScript to real-world projects.</p>
 
                 <div class="social-icons">
-                    <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="social-icon" href="#"><i class="fab fa-github"></i></a>
-                    <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-icon" href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-icon" href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a class="social-icon" href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a class="social-icon" href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
         </section>
@@ -84,74 +245,119 @@
         <section class="resume-section" id="experience">
             <div class="resume-section-content">
                 <h2 class="mb-5">Experience</h2>
-                <h3 class="mb-0">Junior Web Developer</h3>
+                
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Junior Web Developer</h3>
+                        <div class="subheading mb-3">Code College</div>
+                        <p>Currently developing web development skills through intensive coursework and hands-on projects. Building responsive websites using HTML5, CSS3, and JavaScript. Creating interactive web applications and learning industry best practices.</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">2024 - Present</span></div>
+                </div>
             </div>
         </section>
 
         <hr class="m-0" />
 
         <!-- Education -->
-        <div class="container-fluid bg-3">
-            <h1>EDUCATION</h1>
-            <p>High school [2012]</p>
-            <p>Capricorn TVET College [2014]</p>
-        </div>
+        <section class="resume-section" id="education">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Education</h2>
+                
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Code College</h3>
+                        <div class="subheading mb-3">Web Development Program</div>
+                        <p>Intensive web development training covering HTML, CSS, JavaScript, responsive design, and modern web development practices.</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">2024 - Present</span></div>
+                </div>
+                
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Capricorn TVET College</h3>
+                        <div class="subheading mb-3">Technical Vocational Education</div>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">2014</span></div>
+                </div>
+                
+                <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">High School</h3>
+                        <div class="subheading mb-3">Matriculation</div>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">2012</span></div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="m-0" />
 
         <!-- Projects -->
-        <div class="container-fluid bg-3 text-center">
-            <h3>Some small projects of mine</h3><br>
+        <section class="resume-section" id="projects">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Projects</h2>
+                
+                <div class="row">
+                    <div class="col-md-4 project-item text-center">
+                        <h3 class="mb-3">JS Train</h3>
+                        <a href="Chapter12/train.html">
+                            <img src="assets/img/train.png" class="img-fluid" alt="Train Project"
+                                 onerror="this.src='https://via.placeholder.com/300x200/667eea/ffffff?text=JS+Train'" />
+                        </a>
+                        <p class="mt-2">Interactive JavaScript train animation project</p>
+                    </div>
 
-            <div class="row">
+                    <div class="col-md-4 project-item text-center">
+                        <h3 class="mb-3">JavaScript Robot</h3>
+                        <a href="Chapter7/robots.html">
+                            <img src="assets/img/robot.png" class="img-fluid" alt="Robot Project"
+                                 onerror="this.src='https://via.placeholder.com/300x200/764ba2/ffffff?text=JS+Robot'" />
+                        </a>
+                        <p class="mt-2">Customizable JavaScript robot with interactive features</p>
+                    </div>
 
-                <div class="col-sm-3">
-                    <p>JS TRAIN</p>
-                    <a href="Chapter12/train.html">
-                        <img src="assets/img/train.png" class="img-responsive" style="width:60%; max-width:300px;" alt="Train Project">
-                    </a>
+                    <div class="col-md-4 project-item text-center">
+                        <h3 class="mb-3">Dream Car</h3>
+                        <a href="Chapter8/car.html">
+                            <img src="assets/img/car.png" class="img-fluid" alt="Car Project"
+                                 onerror="this.src='https://via.placeholder.com/300x200/f093fb/ffffff?text=Dream+Car'" />
+                        </a>
+                        <p class="mt-2">Interactive car visualization project</p>
+                    </div>
                 </div>
 
-                <div class="col-sm-3">
-                    <p>Customizing my Own JavaScript Robot</p>
-                    <a href="Chapter7/robots.html">
-                        <img src="assets/img/robot.png" class="img-responsive" style="width:60%; max-width:300px;" alt="Robot Project">
-                    </a>
-                </div>
+                <div class="row mt-4">
+                    <div class="col-md-4 project-item text-center">
+                        <h3 class="mb-3">Wishlist</h3>
+                        <a href="Chapter13/wishlist.html">
+                            <img src="assets/img/wishlist.jpeg" class="img-fluid" alt="Wishlist"
+                                 onerror="this.src='https://via.placeholder.com/300x200/4facfe/ffffff?text=Wishlist'" />
+                        </a>
+                        <p class="mt-2">Personal wishlist management application</p>
+                    </div>
 
-                <div class="col-sm-3">
-                    <p>Dream Car</p>
-                    <a href="Chapter8/car.html">
-                        <img src="assets/img/car.png" class="img-responsive" style="width:60%; max-width:300px;" alt="Car Project">
-                    </a>
-                </div>
+                    <div class="col-md-4 project-item text-center">
+                        <h3 class="mb-3">Guessing Game</h3>
+                        <a href="GUESSING%20GAME/guessinggame.html">
+                            <img src="assets/img/guess.png" class="img-fluid" alt="Guessing Game"
+                                 onerror="this.src='https://via.placeholder.com/300x200/00f2fe/ffffff?text=Guess+Game'" />
+                        </a>
+                        <p class="mt-2">Fun interactive number guessing game</p>
+                    </div>
 
-                <div class="col-sm-3">
-                    <h1>Wishlist</h1>
-                    <p>Am creating my wishlist.</p>
-                    <a href="Chapter13/wishlist.html">
-                        <img src="assets/img/wishlist.jpeg" class="img-responsive" style="width:60%; max-width:300px;" alt="Wishlist">
-                    </a>
+                    <div class="col-md-4 project-item text-center">
+                        <h3 class="mb-3">Shopping Cart</h3>
+                        <a href="SHOPPING-CART/shopcart.html">
+                            <img src="assets/img/cart.jpeg" class="img-fluid" alt="Shopping Cart"
+                                 onerror="this.src='https://via.placeholder.com/300x200/43e97b/ffffff?text=Shop+Cart'" />
+                        </a>
+                        <p class="mt-2">Dynamic shopping cart with item management</p>
+                    </div>
                 </div>
-
-                <div class="col-sm-3">
-                    <h1>Guessing Game</h1>
-                    <p>A fun number guessing game</p>
-                    <a href="GUESSING%20GAME/guessinggame.html">
-                        <img src="assets/img/guess.png" class="img-responsive" style="width:60%; max-width:300px;" alt="Guessing Game">
-                    </a>
-                </div>
-
-                <div class="col-sm-3">
-                    <h1>Shopping Cart</h1>
-                    <p>My shopping cart project</p>
-                    <a href="SHOPPING-CART/shopcart.html">
-                        <img src="assets/img/cart.jpeg" class="img-responsive" style="width:60%; max-width:300px;" alt="Shopping Cart">
-                    </a>
-                </div>
-
             </div>
-        </div>
+        </section>
 
-        <br>
         <hr class="m-0" />
 
         <!-- Skills -->
@@ -160,10 +366,13 @@
                 <h2 class="mb-5">Skills</h2>
 
                 <div class="subheading mb-3">Programming Languages & Tools</div>
+                
                 <ul class="list-inline dev-icons">
                     <li class="list-inline-item"><i class="fab fa-html5"></i></li>
                     <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
                     <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-bootstrap"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-git-alt"></i></li>
                 </ul>
 
                 <div class="subheading mb-3">Workflow</div>
@@ -183,8 +392,8 @@
             <div class="resume-section-content">
                 <h2 class="mb-5">Interests</h2>
                 <p>I enjoy most of my time outdoors — usually with casino games to refresh my mind.</p>
-                <p class="mb-0">When indoors, I spend a lot of time coding and researching to improve my skills.</p>
-                <p>I also enjoy gaming to relax my mind.</p>
+                <p class="mb-0">When indoors, I spend a lot of time coding and researching to improve my skills. I'm constantly learning new web development techniques and staying up-to-date with the latest technologies.</p>
+                <p>I also enjoy gaming to relax my mind and find inspiration for interactive web projects.</p>
             </div>
         </section>
 
@@ -194,18 +403,36 @@
         <section class="resume-section" id="awards">
             <div class="resume-section-content">
                 <h2 class="mb-5">Awards & Certifications</h2>
-                <ul class="fa-ul mb-0"></ul>
+                <ul class="fa-ul mb-0">
+                    <li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>Currently pursuing certifications in Web Development</li>
+                </ul>
             </div>
         </section>
 
     </div>
 
-    <!-- Bootstrap core JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core theme JS -->
-    <script src="assets/js/scripts.js"></script>
-
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Close mobile menu after clicking
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarCollapse.classList.remove('show');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
-
 </html>

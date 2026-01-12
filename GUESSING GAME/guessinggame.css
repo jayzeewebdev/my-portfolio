@@ -1,0 +1,36 @@
+  body {
+      font-family: arial;
+      font-size: 100%;
+    }
+
+    .input-area {
+      border-color: black;
+      border: solid;
+      width: 15em;
+      /* Makes the input take the full width of its container */
+      padding: 12px 20px;
+      /* Adds space inside the input */
+      margin: 8px 0;
+      /* Adds space outside the input */
+      box-sizing: border-box;
+      /* Ensures padding/border are included in the width calculation */
+      font-size: 16px;
+      /* Sets a readable font size */
+      border-radius: 12px;
+    }
+
+    .button-submit {
+      /* Makes the input take the full width of its container */
+      padding: 12px 20px;
+      /* Adds space inside the input */
+      margin: 8px 0;
+      /* Adds space outside the input */
+      box-sizing: border-box;
+      /* Ensures padding/border are included in the width calculation */
+      font-size: 16px;
+      /* Sets a readable font size */
+      background-color: green;
+      border-radius: 12px;
+      color: white;
+      cursor: pointer;
+    }
